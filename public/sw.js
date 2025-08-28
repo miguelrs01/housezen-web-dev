@@ -1,0 +1,2 @@
+let CACHE_NAME="houseZen-v1",urlsToCache=["/","/index.html","/favicon.svg","/user.svg","/manifest.json"];self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE_NAME).then(e=>e.addAll(urlsToCache)))}),self.addEventListener("fetch",e=>{e.respondWith(caches.match(e.request).then(t=>t||fetch(e.request)))}),self.addEventListener("activate",e=>{let t=[CACHE_NAME];e.waitUntil(caches.keys().then(e=>Promise.all(e.map(e=>{if(-1===t.indexOf(e))return caches.delete(e)}))))});
+//# sourceMappingURL=sw.js.map
