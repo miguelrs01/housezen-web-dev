@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "site.housezen.www.twa",
+      "sha256_cert_fingerprints": [
+        "02:FA:84:4C:29:CA:8B:18:BD:48:D5:E3:97:1C:0E:7F:61:7E:95:E8:E9:48:28:AA:8D:75:A0:F7:7C:23:51:29"
+      ]
+    }
+  }
+]

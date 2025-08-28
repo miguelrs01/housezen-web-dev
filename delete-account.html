@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Cuenta - HouseZen</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .form-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #e74c3c;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        input[type="email"], textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input[type="email"]:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background: #c0392b;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗑️ Eliminar Cuenta de HouseZen</h1>
+        
+        <div class="warning">
+            <strong>⚠️ Advertencia:</strong> La eliminación de tu cuenta es permanente e irreversible. Se eliminarán todos tus datos, tareas, configuraciones y preferencias.
+        </div>
+
+        <h2>¿Por qué quieres eliminar tu cuenta?</h2>
+        <p>Lamentamos que quieras dejar HouseZen. Tu privacidad y satisfacción son importantes para nosotros.</p>
+
+        <div class="form-section">
+            <h2>Solicitud de Eliminación de Cuenta</h2>
+            <p>Completa el siguiente formulario para solicitar la eliminación de tu cuenta. Procesaremos tu solicitud en un plazo máximo de 30 días.</p>
+            
+            <form id="deleteAccountForm">
+                <div class="form-group">
+                    <label for="email">Email de la cuenta a eliminar *</label>
+                    <input type="email" id="email" name="email" required placeholder="tu-email@ejemplo.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Motivo de eliminación</label>
+                    <select id="reason" name="reason">
+                        <option value="">Selecciona un motivo (opcional)</option>
+                        <option value="no-uso">Ya no uso la aplicación</option>
+                        <option value="privacidad">Preocupaciones de privacidad</option>
+                        <option value="funcionalidad">Problemas con la funcionalidad</option>
+                        <option value="alternativa">Encontré una alternativa mejor</option>
+                        <option value="otro">Otro motivo</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Comentarios adicionales (opcional)</label>
+                    <textarea id="comments" name="comments" placeholder="Cuéntanos más sobre tu decisión o cómo podríamos mejorar..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="confirm" name="confirm" required>
+                        Confirmo que entiendo que esta acción es irreversible y que se eliminarán todos mis datos permanentemente.
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Solicitar Eliminación de Cuenta</button>
+            </form>
+        </div>
+
+        <div class="info">
+            <h3>📋 Qué sucede después:</h3>
+            <ul>
+                <li><strong>Confirmación:</strong> Recibirás un email de confirmación en las próximas 24 horas</li>
+                <li><strong>Período de gracia:</strong> Tendrás 7 días para cancelar la solicitud si cambias de opinión</li>
+                <li><strong>Eliminación:</strong> Después del período de gracia, eliminaremos permanentemente todos tus datos</li>
+                <li><strong>Confirmación final:</strong> Te enviaremos un email confirmando que la eliminación se ha completado</li>
+            </ul>
+        </div>
+
+        <h2>🔄 Alternativas a la eliminación</h2>
+        <p>Antes de eliminar tu cuenta, considera estas opciones:</p>
+        <ul>
+            <li><strong>Desactivar notificaciones:</strong> Puedes silenciar todas las notificaciones en la configuración</li>
+            <li><strong>Pausa temporal:</strong> Simplemente deja de usar la app sin eliminar tus datos</li>
+            <li><strong>Contactar soporte:</strong> Si tienes problemas, podemos ayudarte a resolverlos</li>
+        </ul>
+
+        <h2>📞 ¿Necesitas ayuda?</h2>
+        <p>Si tienes preguntas sobre la eliminación de tu cuenta o necesitas asistencia, contáctanos:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:support@housezen.site">support@housezen.site</a></li>
+            <li><strong>Respuesta:</strong> Dentro de 24-48 horas</li>
+        </ul>
+
+        <a href="/" class="back-link">← Volver a HouseZen</a>
+        
+        <hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;">
+        <p style="text-align: center; color: #666; font-size: 14px;">
+            <strong>HouseZen</strong> - Gestión inteligente del hogar<br>
+            Última actualización: 28/08/2025 17:00 (UTC+2) | <a href="/privacy-policy.html">Política de Privacidad</a>
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('deleteAccountForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const reason = document.getElementById('reason').value;
+            const comments = document.getElementById('comments').value;
+            const confirmed = document.getElementById('confirm').checked;
+            
+            if (!email || !confirmed) {
+                alert('Por favor, completa todos los campos obligatorios.');
+                return;
+            }
+            
+            // Crear el email con los datos del formulario
+            const subject = encodeURIComponent('Solicitud de Eliminación de Cuenta - HouseZen');
+            const body = encodeURIComponent(
+                `Solicito la eliminación de mi cuenta de HouseZen:\n\n` +
+                `Email de la cuenta: ${email}\n` +
+                `Motivo: ${reason || 'No especificado'}\n` +
+                `Comentarios: ${comments || 'Ninguno'}\n\n` +
+                `Confirmo que entiendo que esta acción es irreversible.\n\n` +
+                `Fecha de solicitud: ${new Date().toLocaleDateString('es-ES')}`
+            );
+            
+            // Abrir el cliente de email del usuario
+            window.location.href = `mailto:support@housezen.site?subject=${subject}&body=${body}`;
+            
+            // Mostrar mensaje de confirmación
+            alert('Se abrirá tu cliente de email para enviar la solicitud. Si no se abre automáticamente, copia la información y envíala manualmente a support@housezen.site');
+        });
+    </script>
+</body>
+</html>
